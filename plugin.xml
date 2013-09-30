@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.dileep.plugins.datepicker"
+    version="0.2.1">
+    <name>DatePickerPlugin</name>
+    <description>Cordova Date Picker Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,datepicker</keywords>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DatePickerPlugin">
+                <param name="android-package" value="com.dileep.plugins.DatePickerPlugin"/>
+            </feature>
+        </config-file>
+        
+		<js-module src="www/android/datePickerPlugin.js" name="datePicker">
+			<clobbers target="datePicker" />
+		</js-module>
+
+        <source-file src="src/android/DatePickerPlugin.java" target-dir="src/org/apache/cordova/datepicker" />
+
+     </platform>
+     <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+		<feature name="DatePicker">
+			<param name="ios-package" value="DatePicker"/>
+		</feature>
+        </config-file>
+
+        <js-module src="www/ios/DatePicker.js" name="DatePicker">
+            <clobbers target="datePicker" />
+        </js-module>
+
+	   <header-file src="src/ios/DatePicker.h" />
+	   <source-file src="src/ios/DatePicker.m" />
+
+    </platform>
+</plugin>
