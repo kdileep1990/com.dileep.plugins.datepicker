@@ -25,9 +25,10 @@ DatePicker.prototype.show = function(options, cb) {
             + (options.date.getHours()) + "/" + (options.date.getMinutes());
     }
     var defaults = {
-        mode : '',
-        date : '',
-        allowOldDates : true
+        mode : 'datetime',
+        date : new Date(),
+        allowOldDates : true,
+        allowFutureDates : true
     };
 
     for ( var key in defaults) {
