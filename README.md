@@ -1,4 +1,4 @@
-# DatePicker iOS Plugin for using PhoneGap / Cordova 3.0 (iOS 7 beta ready)
+# DatePicker android Plugin for using PhoneGap / Cordova 3.0
 
 ## Installation
 
